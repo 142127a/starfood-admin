@@ -31,7 +31,7 @@ const ManageAllOrders = () => {
 
       data.status = "Approved";
       const res = await axios.put(
-        `https://starfood.herokuapp.com/api/orders/${id}`,
+        `https://starfood-admin.herokuapp.com/api/orders/${id}`,
         { ...data }
       );
       toast.success(res.data.message);

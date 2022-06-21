@@ -10,12 +10,12 @@ import {
   Home,
   Login,
   ManageAllOrders,
-  MyOrders,
+
   NotFound,
   PlaceOrder,
   PrivateRoute,
   ProductDetail,
-  Register,
+
   Shop,
   UserDashboard,
   Welcome,
@@ -45,7 +45,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
           <Route path="shop" element={<Shop />} />
           <Route path="products/:productId" element={<ProductDetail />} />
           <Route
@@ -68,7 +67,6 @@ function App() {
             }
           >
             <Route index element={<Welcome />}></Route>
-            <Route path="myorders" element={<MyOrders />}></Route>
             <Route path="manageOrders" element={<ManageAllOrders />}></Route>
             <Route path="addproduct" element={<AddProduct />} />
           </Route>

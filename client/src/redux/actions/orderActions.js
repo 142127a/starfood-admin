@@ -31,7 +31,7 @@ export const createOrders = (order, navigate, toast) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://starfood.herokuapp.com/api/orders",
+      "https://starfood-admin.herokuapp.com/api/orders",
       order,
       config
     );
@@ -60,7 +60,7 @@ export const getUserOrders = (email) => async (dispatch) => {
   try {
     dispatch({ type: GET_ORDER_REQUEST });
     const { data } = await axios.get(
-      `https://starfood.herokuapp.com/api/orders/${email}`
+      `https://starfood-admin.herokuapp.com/api/orders/${email}`
     );
     dispatch({
       type: GET_ORDER_SUCCESS,
@@ -91,7 +91,7 @@ export const deleteOrder = (id, toast) => async (dispatch) => {
     };
 
     const { data } = await axios.delete(
-      `https://starfood.herokuapp.com/api/orders/${id}`,
+      `https://starfood-admin.herokuapp.com/api/orders/${id}`,
       config
     );
     dispatch({
@@ -118,7 +118,7 @@ export const getAllOrders = () => async (dispatch) => {
   try {
     dispatch({ type: GET_ALL_ORDER_REQUEST });
     const { data } = await axios.get(
-      `https://starfood.herokuapp.com/api/orders`
+      `https://starfood-admin.herokuapp.com/api/orders`
     );
     dispatch({
       type: GET_ALL_ORDER_SUCCESS,

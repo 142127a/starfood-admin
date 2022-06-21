@@ -44,15 +44,6 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li
-                className={currentLink === 2 ? "active" : "none"}
-                onClick={() => setCurrentLink(2)}
-              >
-                <Link to="/dashboard/myorders">
-                  <RiDashboard2Fill />
-                  <span> My Orders</span>
-                </Link>
-              </li>
-              <li
                 className={currentLink === 3 ? "active" : "none"}
                 onClick={() => setCurrentLink(3)}
               >

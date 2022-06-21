@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Spinner } from "react-bootstrap";
-import { FcGoogle } from "react-icons/fc";
 import { isEmail, isEmpty } from "../../utils/validation";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
-import { googleSignin, login } from "../../redux/actions/userActions";
+import { login } from "../../redux/actions/userActions";
 import { USER_RESET } from "../../redux/constants/userConstants";
 
 const Login = () => {
@@ -36,14 +35,13 @@ const Login = () => {
     if (!isEmail(email)) {
       return toast.error("Email must be a valid Email.");
     }
-
-    dispatch(login(email, password));
+    if(email==="dobich1937@gmail.com"&&password==="123456"){
+      dispatch(login(email, password));
+    }
     setNewUser({ email: "", password: "" });
   };
 
-  const handleGoogleLogin = () => {
-    dispatch(googleSignin());
-  };
+
 
   useEffect(() => {
     if (error) {
@@ -93,11 +91,6 @@ const Login = () => {
                 {typePass ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
               </small>
             </div>
-
-            <div className="contact__form__forgot">
-              <Link to="/forgotpassword">Forgot your password?</Link>
-            </div>
-
             <button
               className="button"
               type="submit"
@@ -105,25 +98,6 @@ const Login = () => {
             >
               {loading ? <Spinner animation="border" size="sm" /> : "Login"}
             </button>
-            <div>
-              <p style={{ textAlign: "center", fontWeight: "700" }}>Or</p>
-            </div>
-
-            <div className="social" style={{ textAlign: "center" }}>
-              <button
-                className="google"
-                type="button"
-                onClick={handleGoogleLogin}
-              >
-                <FcGoogle /> Google Log In
-              </button>
-            </div>
-            <div
-              className="contact__form__forgot"
-              style={{ textAlign: "start" }}
-            >
-              <Link to="/register">Don't have an account ? Register</Link>
-            </div>
           </form>
         </div>
       </div>

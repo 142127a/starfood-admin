@@ -36,7 +36,7 @@ const ProductDetail = () => {
 
               <div className="product__detial__info__price">
                 <span className="product__detail__info__price-count">
-                  ${product.price}.00
+                  {product.price}.000 VND
                 </span>
               </div>
               <div className="product__detail__info-rating">

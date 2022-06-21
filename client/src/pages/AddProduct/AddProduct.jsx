@@ -35,7 +35,7 @@ const AddProduct = () => {
       setIsLoading(true);
       setUploadError("");
       const res = await axios.post(
-        "https://starfood.herokuapp.com/api/upload",
+        "https://starfood-admin.herokuapp.com/api/upload",
         formData,
         {
           headers: {
@@ -63,7 +63,7 @@ const AddProduct = () => {
       setIsLoading(true);
       setUploadError("");
       const res = await axios.post(
-        "https://starfood.herokuapp.com/api/destroy",
+        "https://starfood-admin.herokuapp.com/api/destroy",
         {
           public_id: images.public_id,
         }

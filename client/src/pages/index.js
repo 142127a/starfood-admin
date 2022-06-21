@@ -1,5 +1,4 @@
 import Login from "./Login/Login";
-import Register from "./Register/Register";
 import Home from "./Home/Home";
 import Contact from "./Contact/Contact";
 import NotFound from "./NotFound/NotFound";
@@ -15,7 +14,6 @@ import Welcome from "./UserDashboard/Welcome/Welcome";
 
 export {
   Login,
-  Register,
   Home,
   Contact,
   NotFound,

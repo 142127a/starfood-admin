@@ -31,7 +31,7 @@ const Contact = () => (
 
                 <p>
                   <a href="mailto:sahadat.developer@gmail.com">
-                    yummy@gmail.com
+                    abc@gmail.com
                   </a>
                 </p>
               </div>

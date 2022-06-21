@@ -52,7 +52,7 @@ const Shop = () => {
                   <div className="products__items__item__content">
                     <h2>{name}</h2>
                     <ProductRating ratingValue={rating} />
-                    <h4>${price}.00</h4>
+                    <h4>{price}.000 VND</h4>
                   </div>
                 </motion.div>
               ))}
