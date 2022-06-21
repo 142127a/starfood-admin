@@ -106,11 +106,11 @@ const Footer = () => (
         <ul className="footer__links footer__location">
           <li>
             <GoLocation />
-            No: 58 A, East Madison Street, Baltimore, MD, USA 4508
+           HCM, VN
           </li>
           <li>
             <IoCallOutline />
-            0000 - 123456789
+            0000
           </li>
           <li>
             <IoTimeOutline />
@@ -118,7 +118,7 @@ const Footer = () => (
           </li>
           <li>
             <AiOutlineMail />
-            yummi@example.com
+            abc@example.com
           </li>
         </ul>
       </div>
@@ -137,7 +137,7 @@ const Footer = () => (
         </ul>
       </div>
     </div>
-    <p className="footer__copyright">&copy; YUMMY. All Right Reserved 2022</p>
+    <p className="footer__copyright">&copy;All Right Reserved 2022</p>
   </footer>
 );
 
